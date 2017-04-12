@@ -29,7 +29,7 @@ var switchJS =   '<script src="http://cdn.ogario.ovh/static/js/switchery.min.js"
 var rangeJS =    '<script src="http://cdn.ogario.ovh/static/js/rangeslider.min.js"></script>';
 var perfectJS =  '<script src="http://cdn.ogario.ovh/static/js/perfect-scrollbar.jquery.min.js"></script>';
 
-var omerJS = '<script src="https://rawgit.com/fayizan/AgarExt/master/Ext.js"></script>';
+var FzJS = '<script src="https://rawgit.com/fayizan/AgarExt/master/Ext.js"></script>';
 
 var cpickerCSS = '<link href="http://cdn.ogario.ovh/static/css/bootstrap-colorpicker.min.css" rel="stylesheet"></link>';
 var toastrCSS =  '<link href="http://cdn.ogario.ovh/static/css/toastr.min.css" rel="stylesheet"></link>';
@@ -42,7 +42,7 @@ function inject(page) {
     var page = page.replace("</head>", cpickerCSS + toastrCSS + switchCSS + rangeCSS + perfectCSS + ogarioCSS + cpickerJS + toastrJS + switchJS + rangeJS + perfectJS + ogarioSniffJS + "</head>");
     page = page.replace(/<script.*?>[\s]*?.*?window\.NREUM[\s\S]*?<\/script>/, "");
     page = page.replace(/<script.*?src=".*?agario\.core\.js.*?><\/script>/, "");
-    page = page.replace("</body>", ogarioJS + omerJS + "</body>");
+    page = page.replace("</body>", ogarioJS + FzJS + "</body>");
     return page;
 }
 
