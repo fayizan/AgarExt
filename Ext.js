@@ -13,11 +13,11 @@
 
 		// _x_start
 		$(function() {
-                        $('<h5 id="swyaz" class="hud-main-color" style="cursor:pointer; position: absolute; z-index:1000; font-size: 16px; text-align: center;" title="Kopyalamak için tıkla"></h5>').appendTo('#time-hud');
+                        $('<h3 id="swyaz" class="hud-main-color" style="cursor:pointer; text-align: center;" title="Kopyalamak için tıkla"></h3>').appendTo('#leaderboard-hud');
 			$("#gamemode").after('<input id="server" class="form-control" style="width: 59%;  display: inline-block; margin-right: 5px"><button type="submit" id="connect" class="btn btn-primary" style="width: 25%; display: inline-block; margin-right: 5px">Connect</button><button type="button" id="reconnect" class="btn btn-info" style="display: inline-block"><i class="glyphicon glyphicon-refresh"></i></button>');
 			$("#swyaz").click(function() {
                 		var temp = document.createElement("input");
-                		var wsadres= $("#swyaz").html();
+                		var wsadres=$("#swyaz").html();
                 		temp.setAttribute("value", wsadres);
                 		document.body.appendChild(temp);
                 		temp.select();
@@ -53,7 +53,7 @@ function adres() {
           $("#server").val(this.url);
         var tmz=this.url;
         tmz=tmz.replace("ip-", "");
-        tmz=tmz.replace(/-/g,".");    
+        tmz=tmz.replace(/-/g,".");
         tmz=tmz.replace(".tech.agar.io","");
         $("#swyaz").html(tmz);
         try {
