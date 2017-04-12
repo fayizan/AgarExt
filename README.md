@@ -1,9 +1,9 @@
-Agar.io Eklentisi <br>
-Bu Eklenti ile agario kullanıcı paneline; <br>
-1-Server Ws Adresi ile bağlanma bölümü<br>
-2-Server yenileme butonu <br>
-3-Aktif Serverin ws adresini tespit edip ekrana ve panele yazma<br>
-4-ekrandaki ip adresine tıklayınca hafızaya alma kodlarını ekler.<br>
+Agar.io Extension <br>
+With this plugin, agario user panel; <br>
+Connect with 1-Server Ws Address <br>
+2-Server refresh button <br>
+3-Identify the Active Server's ws address and write to the screen and pan
+4-Click on the ip address on the screen to add memory import codes. <br>
 <br>
-Bu eklenti tampermonkey kullanılarak oyunda çalıştırılabilir.<br>
-Eklentiyi Ogario.ovh eklentisine js dosyası olarak ilave ederek te kullanabiliriz.
+This plugin can be run in the game using TamperMonkey. <br>
+We can use te to add the plugin to the Ogario.ovh plugin as a js file.
