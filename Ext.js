@@ -13,11 +13,12 @@
 
 		// _x_start
 		$(function() {
-                        $('<h3 id="swyaz" class="hud-main-color" style="cursor:pointer; text-align: center;" title="Click to copy"></h3>').appendTo('.leaderboard-panel');
+                        $('body').append( '<div id="swyaz" class="hud-main-color" style="position: absolute; cursor:pointer; text-align: center; top:262px; width: 200px; height:18px; line-height: normal; right:10px; background-color: rgba(0, 0, 0, .5); font-size:15px; font-weight: bold; z-index:200;" title="Click to Copy"></div>' );
 			$("#gamemode").after('<input id="server" class="form-control" style="width: 59%;  display: inline-block; margin-right: 5px"><button type="submit" id="connect" class="btn btn-primary" style="width: 25%; display: inline-block; margin-right: 5px">Connect</button><button type="button" id="reconnect" class="btn btn-info" style="display: inline-block"><i class="glyphicon glyphicon-refresh"></i></button>');
 			$("#swyaz").click(function() {
+				var wsadres=$("#swyaz").html();
+				if (wsadres=="WS Address Copied"){return false;}
                 		var temp = document.createElement("input");
-                		var wsadres=$("#swyaz").html();
                 		temp.setAttribute("value", wsadres);
                 		document.body.appendChild(temp);
                 		temp.select();
@@ -31,8 +32,8 @@
             });
 			$("#reconnect").click(function() {
                 MC.reconnect()
-		adres();	
-			})
+		adres();		
+            })
 //----------------
 $( "#region" ).on('change', function() {
  MC.setRegion($('#region').val());   
