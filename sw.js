@@ -13,18 +13,18 @@
 
 		// _x_start
 		$(function() {
-                        $('body').append( '<div id="swyaz" class="hud-main-color" style="position: absolute; cursor:pointer; text-align: center; top:262px; width: 200px; height:18px; line-height: normal; right:10px; background-color: rgba(0, 0, 0, .5); font-size:15px; font-weight: bold; z-index:200;" title="Kopyalamak için tıkla"></div>' );
+                        $('body').append( '<div id="swyaz" class="hud-main-color" style="position: absolute; cursor:pointer; text-align: center; top:262px; width: 200px; height:18px; line-height: normal; right:10px; background-color: rgba(0, 0, 0, .5); font-size:15px; font-weight: bold; z-index:200;" title="Click to Copy"></div>' );
 			$("#gamemode").after('<input id="server" class="form-control" style="width: 59%;  display: inline-block; margin-right: 5px"><button type="submit" id="connect" class="btn btn-primary" style="width: 25%; display: inline-block; margin-right: 5px">Connect</button><button type="button" id="reconnect" class="btn btn-info" style="display: inline-block"><i class="glyphicon glyphicon-refresh"></i></button>');
 			$("#swyaz").click(function() {
 				var wsadres=$("#swyaz").html();
-				if (wsadres=="WS Adresi Kopyalandı"){return false;}
+				if (wsadres=="WS Address Copied"){return false;}
                 		var temp = document.createElement("input");
                 		temp.setAttribute("value", wsadres);
                 		document.body.appendChild(temp);
                 		temp.select();
                 		document.execCommand("copy");
                 		document.body.removeChild(temp);
-                		$("#swyaz").html('WS Adresi Kopyalandı').css( {"background-color": "green", "opacity": "1.0"});
+                		$("#swyaz").html('WS Address Copied').css( {"background-color": "green", "opacity": "1.0"});
           			setTimeout(function(){$("#swyaz").html(wsadres).css("background-color", "rgba(0, 0, 0, .5)");}, 1000);
              	});
 			$("#connect").click(function() {
